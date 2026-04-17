@@ -1,7 +1,51 @@
 .head-container{
-    height: 600px;
+    height: 800px;
     width: 100%;
     padding: 54px 164px;
    border-bottom-left-radius: 90px;
      background: linear-gradient(to right, #ff7e5f, #feb47b);
+}
+
+.head-container .text-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    gap: 90px;
+    color: white;
+}
+.text-container h1{
+    font-size: 80px;
+    font-weight: 700;
+    margin: 0;
+}
+.text-container p{
+    font-size: 30px;
+    font-weight: 400;
+    margin: 0;
+}
+.head_container-text-btn{
+    background-color: transparent;
+    color: white;
+    border: none;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 12px 24px;
+    cursor: pointer;
+}
+
+.head_container-text-btn:hover{
+    background-color: white;
+    color: #ff7e5f;
+    transition: all 0.3s ease;
+    border-radius: 30px;
+}
+.head-btn button{
+    border: 2px solid white;
+    border-radius: 20px;
+    margin-left: 10px;
+
+
 }
