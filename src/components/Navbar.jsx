@@ -2,6 +2,8 @@ import React , {useState} from "react";
 import './Navbar.css'
 import logo from './logo.svg'
 import arrow from '../images/icon-arrow-light.svg'
+import Hamburger from '../images/icon-hamburger.svg'
+import Close from '../images/icon-close.svg'
 
 const Navbar = () => {
     const [openMenu, setOpenMenu] = useState(null);
@@ -14,11 +16,11 @@ const Navbar = () => {
     <div className="nav__app-logo">
     <img src={logo} alt="" />
     </div>
-        {/* <ul className="nav__app-links">
+        <ul className="nav__app-links">
          <li onClick={() => toggleMenu("product")}><a href="Product">Product <img src= {arrow} alt="" /></a></li>
         <li><a href="Company">Company <img src= {arrow} alt="" /></a></li>
         <li><a href="Connect">Connect <img src= {arrow} alt="" /></a></li>
-        </ul> */}
+        </ul>
         <ul className="nav__app-links">
         <li onClick={() => toggleMenu("product")}>
           <a href="#">Product <img src={arrow} alt="" /></a>
@@ -55,7 +57,18 @@ const Navbar = () => {
   <div className="auth">
              <button className="login">Login</button>
         <button className="signup">Sign Up</button>
-        </div>      
+        </div>   
+        <div className="app__navbar-smallscreen">
+          <img src={Hamburger} alt="pic" onClick={() => {}} />
+          <div className="app__navbar-smallscreen_overlay" >
+            <img src={Close} alt="" onClick={()=>{}} className="overlay__close"/>
+          <ul className="app__navbar-smallscreen-links">
+              <li><a href="Product">Product <img src= {arrow} alt="" /></a></li>
+              <li><a href="Company">Company <img src= {arrow} alt="" /></a></li>
+              <li><a href="Connect">Connect <img src= {arrow} alt="" /></a></li>
+          </ul>
+          </div>
+          </div>   
      </nav>
   )
 }
