@@ -17,6 +17,7 @@
     color: white;
 }
 .text-container h1{
+    text-align: center;
     font-size: 80px;
     font-weight: 700;
     margin: 0;
@@ -69,14 +70,25 @@
   }
 }
 @media screen and (max-width: 600px) {
+  .text-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+
+  }
   .text-container h1 {
-    font-size: 30px;
+    font-size: 28px;
+    text-align: center;
   }
   .text-container p {
     font-size: 18px;
+    flex-direction: column;
+    margin-left: 10px;
   }
   .head-btn button {
     font-size: 10px;
+   
    
   }
 }
