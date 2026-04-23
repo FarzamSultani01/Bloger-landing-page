@@ -120,9 +120,9 @@ font-size: 20px;
 }
 
 .app__navbar-smallscreen .dropdown-smallscreen {
-  position: static;   /* stack naturally */
-  background: none;   /* inherit overlay background */
-  color: white;       /* match overlay text */
+  position: static;   
+  background: none;   
+  color: white;       
   box-shadow: none;
   padding: 0;
 }
