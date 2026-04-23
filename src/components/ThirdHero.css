@@ -1,0 +1,77 @@
+.ThirdHero-container{
+    height: 786px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 20px;
+}
+.ComImage{
+    transform: translateX(-30%);
+    display: block;
+}
+.ComImageMobile{
+    display: none;
+}
+.ThirdHero-text{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.ThirdHero-text h1{
+    font-size: 30px;
+    color: #0D47A1;
+    padding-bottom: 30px;
+}
+.ThirdHero-text p{
+    font-size:20px ;
+    width: 70%;
+    color: #757575;
+}
+@media screen and (max-width:1150px){
+    .ThirdHero-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .ThirdHero-text{
+        align-items: center;
+        text-align: center;
+    }
+      .ThirdHero-text h1{
+        font-size: 25px;
+      }
+    .ThirdHero-text p{
+        width: 90%;
+        font-size: 15px;
+        padding-left: 50px;
+    }
+    .ComImage{
+        display: none;
+    }
+    .ComImageMobile{
+        padding-right:100px ;
+        display: block;
+        width: 120%;
+
+    }
+}
+
+@media screen and (max-width:600px){
+
+   .ThirdHero-text h1{
+        font-size: 20px;
+      }
+       .ThirdHero-text p{
+        font-size: 15px;
+        
+    }
+    .ComImageMobile{
+        display: block;
+        width: 500px;
+        margin-left: 100px
+        
+    }
+}

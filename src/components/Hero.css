@@ -31,12 +31,12 @@
 }
 .hero-container-component-left h2{
     color: rgb(100, 92, 92);
-    font-size: 20px;
+    font-size: 30px;
 }
 .hero-container-component-left p{
     color:rgb(3, 3, 107) ;
     width: 90%;
-    font-size: 15px;
+    font-size: 20px;
 }
 .hero-container-component-right{
     display: flex;

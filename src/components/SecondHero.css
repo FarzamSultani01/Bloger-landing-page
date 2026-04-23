@@ -30,7 +30,7 @@
 }
 
 .SecondHero-text h1{
-  font-size: 50px;
+  font-size: 30px;
   color: aliceblue;
   padding-bottom: 30px;
 
@@ -61,7 +61,6 @@ font-size: 20px ;
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 3px solid black;
 }
   .SecondHero-text h1 {
     font-size: 30px;
