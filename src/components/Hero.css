@@ -80,20 +80,20 @@
     font-size: 20px;
   }
   .hero-container-component {
-    grid-template-columns: 1fr; /* stack into one column */
+    grid-template-columns: 1fr; 
     text-align: center;
   }
 
   .hero-mobile-image {
     display: block;
-    display: flex;              /* use flexbox */
-    justify-content: center;    /* center horizontally */
-    align-items: center;        /* center vertically if needed */
-    margin: 20px auto;          /* add spacing and auto-center */
-    width: 100%;              /* take full width */
+    display: flex;             
+    justify-content: center;    
+    align-items: center;       
+    margin: 20px auto;         
+    width: 100%;             
   }
   .hero-mobile-image img {
-    width: 700px;             /* keep image responsive */
+    width: 700px;             
     height: 300px;
   }
   .hero-mobile-image {
@@ -108,7 +108,7 @@
 @media screen and (max-width:700px){
 
 .hero-mobile-image img {
-    width: 500px;             /* keep image responsive */
+    width: 500px;             
     height: 200px;
   }
   .hero-container-component-left h2{

@@ -42,11 +42,55 @@ font-size: 20px ;
 }
 
 @media screen and (max-width:1150px){
-  .SecondHero-contents{
-    display: grid;
-    grid-template-columns: 1fr;
+    .SecondHero-contents {
+    grid-template-columns: 1fr; /* stack vertically */
+    text-align: center;
+    margin-top: 200px;
+    align-items: center;
+
   }
-  
+
+  .SecondHero-phonesimages img {
+    width: 40%;  
+    padding-bottom: 80px;
+  }
+.SecondHero-phonesimages{
+  height: 20px;
+}
+.SecondHero-text{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid black;
+}
+  .SecondHero-text h1 {
+    font-size: 30px;
+    margin-top: 90px;
+  }
+
+  .SecondHero-text p {
+    font-size: 16px;
+    max-width: 90%;
+    
+   
+  }
+}
+@media screen and (max-width:660px){
+
+   .SecondHero-text h1 {
+    font-size: 20px;
+    margin-top: 10px;
+  }
+   .SecondHero-text p{
+    font-size:10px;
+   }
+    .SecondHero-phonesimages img {
+    width: 70%;  
+    padding-bottom: 80px;
+  }
+  .SecondHero-contents{
+     margin-top: 70px;
+  }
 }
 
 
