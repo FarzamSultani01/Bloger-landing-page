@@ -16,7 +16,6 @@ function App() {
       <SecondHero />
       <ThirdHero />
       <Footer />
-      <h1>ji</h1>
   </div>
   )
 }
