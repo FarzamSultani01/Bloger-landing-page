@@ -1,14 +1,16 @@
 .nav__app {
+ 
   display: flex;
   justify-content: space-between; 
   align-items: center;
   padding: 0 10px;
 }
  .nav__app-logo img {
- 
+
  width: 150px;
 }
 ul{ 
+  
     display: flex;
     gap: 20px;
     list-style: none;
@@ -17,6 +19,7 @@ ul{
 li{
     cursor: pointer;}
 a{
+  
     text-decoration: none;
     color: white;
     font-size: 20px;
@@ -69,6 +72,7 @@ font-size: 20px;
 } */
 
 .dropdown {
+  display: block;
   position: absolute;
   top: 100%;
   left: 0;
@@ -105,18 +109,19 @@ font-size: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  padding-top: 100px;
+  padding-right: 200px;
   z-index: 5;
 }
 
 .app__navbar-smallscreen_overlay .overlay__close{
-
   font-size: 27px;
   color: white;
   cursor: pointer;
   position: absolute;
   top: 20px;
   right: 20px;
+  padding-right: 120px;
 }
 
 .app__navbar-smallscreen .dropdown-smallscreen {
@@ -127,12 +132,13 @@ font-size: 20px;
   padding: 0;
 }
 @media screen and (max-width:1150px) {
-  
+ 
   .nav__app-links{
     display: none; 
   }
   .app__navbar-smallscreen {
     display: flex; 
+    
   }
   .app__navbar-smallscreen-links{
     display: flex;
@@ -178,7 +184,12 @@ font-size: 20px;
 }
 
 @media screen and (max-width:660px){
-
+  .app__navbar-smallscreen-links{
+    padding: 50px;
+  }
+ .logo__smallscreen{
+    width: 100px;
+  }
 .signup{
     font-size: 15px;
   }

@@ -13,7 +13,7 @@ const Navbar = () => {
     setOpenMenu(openMenu === menuName ? null : menuName);
   };
   const [hamburgerMenu, setHamburgerMenu] = useState(false);
-
+  
   return (
     <nav className="nav__app"> 
       <div className="nav__app-logo">
@@ -67,7 +67,7 @@ const Navbar = () => {
              <div className="nav__app-logo-smallscreen">
         <img className="logo__smallscreen" src={logo} alt="logo" />
       </div>
-            <img src={Close} alt="close" onClick={() => setHamburgerMenu(false)} className="overlay__close"/>
+            <img src={Close}  alt="close" onClick={() => setHamburgerMenu(false)} className="overlay__close"/>
             <ul className="app__navbar-smallscreen-links">
               <li onClick={()=>toggleMenu("product")}><a href="#">Product <img src={arrowDark} alt="" /></a>
               {openMenu === "product" && (

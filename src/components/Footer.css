@@ -54,8 +54,8 @@
     .Footer-image{
        width: 150px;
     }
-    .Footer-logo{
-   
+    .Footer-logo 
+    {
         height: 100px;
     }
     .Footer-list h1{
@@ -78,10 +78,12 @@
 @media  screen and (max-width:600px){
     .Footer-list{
         margin: 0;
+       
     }
     .Footer-list li{
         padding: 5px;
         font-size: 10px;
+        
     }
     .Footer-list h1{
         font-size: 15px;
@@ -89,5 +91,6 @@
     .Footer-image{
        width: 100px;
        padding-bottom: 30px;
+        
     }
 }
