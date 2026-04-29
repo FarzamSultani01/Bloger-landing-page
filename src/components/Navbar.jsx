@@ -7,6 +7,21 @@ import Hamburger from '../images/icon-hamburger.svg';
 import Close from '../images/icon-close.svg';
 import arrowDark from '../images/icon-arrow-dark.svg';
 
+const NAV_ITEMS =[ 
+  {
+    lable: "Product",
+    links: ["Overview", "Pricing", "Marketplace", "Features", "Integrations"]
+  },
+  {
+    lable: "Company",
+    links: ["About", "Team", "Blog", "Careers"]
+  },
+  {
+    lable: "Connect",
+    links: ["Contact", "Newsletter", "LinkedIn"]
+  }
+]
+
 const Navbar = () => {
   const [openMenu, setOpenMenu] = useState(null);
   const toggleMenu = (menuName) => {
