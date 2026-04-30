@@ -36,45 +36,24 @@ const Navbar = () => {
       </div>
 
       <ul className="nav__app-links">
-        <li onClick={() => toggleMenu("product")}>
-          <a href="#">Product <img src={arrow} alt="" /></a>
-          {openMenu === "product" && (
-            <ul className="dropdown">
-              <li><a href="#">Overview</a></li>
-              <li><a href="#">Pricing</a></li>
-              <li><a href="#">Marketplace</a></li>
-            </ul>
-          )}
-        </li>
-
-        <li onClick={() => toggleMenu("company")}>
-          <a href="#">Company <img src={arrow} alt="" /></a>
-          {openMenu === "company" && (
-            <ul className="dropdown">
-              <li><a href="#">About</a></li>
-              <li><a href="#">Careers</a></li>
-            </ul>
-          )}
-        </li>
-
-        <li onClick={() => toggleMenu("connect")}>
-          <a href="#">Connect <img src={arrow} alt="" /></a>
-          {openMenu === "connect" && (
-            <ul className="dropdown">
-              <li><a href="#">Contact</a></li>
-              <li><a href="#">Newsletter</a></li>
-              <li><a href="#">LinkedIn</a></li>
-            </ul>
-          )}
-        </li>
+        {NAV_ITEMS.map(({lable, links}) => (
+          <li key={lable} onClick={() => toggleMenu(lable)}>
+            <a href="#">{lable} <img src={arrow} alt="" /></a>
+            {openMenu === lable && (
+              <ul className="dropdown">
+                {links.map((link) => (
+                  <li key={link}><a href="#">{link}</a></li>
+                ))}
+              </ul>
+            )}
+          </li>
+        ))}
       </ul>
 
       <div className="auth">
         <button className="login">Login</button>
         <button className="signup">Sign Up</button>
       </div>   
-
-     
       <div className="app__navbar-smallscreen">
         <img src={Hamburger} alt="menu" onClick={() => setHamburgerMenu(true)} />
         {hamburgerMenu && (
@@ -84,34 +63,18 @@ const Navbar = () => {
       </div>
             <img src={Close}  alt="close" onClick={() => setHamburgerMenu(false)} className="overlay__close"/>
             <ul className="app__navbar-smallscreen-links">
-              <li onClick={()=>toggleMenu("product")}><a href="#">Product <img src={arrowDark} alt="" /></a>
-              {openMenu === "product" && (
-            <ul className="dropdown dropdown-smallscreen">
-              <li><a href="#">Overview</a></li>
-              <li><a href="#">Pricing</a></li>
-              <li><a href="#">Marketplace</a></li>
-            </ul>
-              )}
-              </li>
-              
-              <li onClick={()=> toggleMenu("company")}><a href="#">Company<img src={arrowDark} alt="" /></a>
-              {openMenu === "company" && (
-              <ul className="dropdown dropdown-smallscreen">
-               <li><a href="#">About</a></li>
-              <li><a href="#">Careers</a></li>
-              </ul>
-              )}
-              </li>
-              <li onClick={()=> toggleMenu("connect")}><a href="#">Connect<img src={arrowDark} alt="" /></a>
-              {openMenu === "connect" && (
-              <ul className="dropdown dropdown-smallscreen">  
-              <li><a href="#">Contact</a></li>
-              <li><a href="#">Newsletter</a></li>
-              <li><a href="#">LinkedIn</a></li>
-                </ul>
+              {NAV_ITEMS.map(({lable, links}) => (
+                <li key={lable} onClick={() => toggleMenu(lable)}>
+                  <a href="#">{lable} <img src={arrowDark} alt="" /></a>
+                  {openMenu === lable && (
+                    <ul className="dropdown">
+                      {links.map((link) => (
+                        <li key={link}><a href="#">{link}</a></li>
+                      ))}
+                    </ul>
                   )}
-              
-              </li>
+                </li>
+              ))}
               
               <div className="auth__smallscreen">
                 <button className="login">Login</button>
