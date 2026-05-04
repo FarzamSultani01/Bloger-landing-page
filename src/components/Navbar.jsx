@@ -9,15 +9,15 @@ import arrowDark from '../images/icon-arrow-dark.svg';
 
 const NAV_ITEMS =[ 
   {
-    lable: "Product",
+    label: "Product",
     links: ["Overview", "Pricing", "Marketplace", "Features", "Integrations"]
   },
   {
-    lable: "Company",
+    label: "Company",
     links: ["About", "Team", "Blog", "Careers"]
   },
   {
-    lable: "Connect",
+    label: "Connect",
     links: ["Contact", "Newsletter", "LinkedIn"]
   }
 ]
@@ -36,10 +36,10 @@ const Navbar = () => {
       </div>
 
       <ul className="nav__app-links">
-        {NAV_ITEMS.map(({lable, links}) => (
-          <li key={lable} onClick={() => toggleMenu(lable)}>
-            <a href="#">{lable} <img src={arrow} alt="" /></a>
-            {openMenu === lable && (
+        {NAV_ITEMS.map(({label, links}) => (
+          <li key={label} onClick={() => toggleMenu(label)}>
+            <a href="#">{label} <img src={arrow} alt="" /></a>
+            {openMenu === label && (
               <ul className="dropdown">
                 {links.map((link) => (
                   <li key={link}><a href="#">{link}</a></li>
@@ -63,16 +63,16 @@ const Navbar = () => {
       </div>
             <img src={Close}  alt="close" onClick={() => setHamburgerMenu(false)} className="overlay__close"/>
             <ul className="app__navbar-smallscreen-links">
-              {NAV_ITEMS.map(({lable, links}) => (
-                <li key={lable} onClick={() => toggleMenu(lable)}>
-                  <a href="#">{lable} <img src={arrowDark} alt="" /></a>
-                  {openMenu === lable && (
-                    <ul className="dropdown">
-                      {links.map((link) => (
-                        <li key={link}><a href="#">{link}</a></li>
-                      ))}
-                    </ul>
-                  )}
+              {NAV_ITEMS.map(({label, links}) => (
+                <li key={label} onClick={() => toggleMenu(label)}>
+                  <a href="#">{label} <img src={arrowDark} alt="" /></a>
+                 {openMenu === label && (
+              <ul className="dropdown-smallscreen">
+                {links.map((link) => (
+                  <li key={link}><a href="#">{link}</a></li>
+                ))}
+              </ul>
+            )}
                 </li>
               ))}
               
